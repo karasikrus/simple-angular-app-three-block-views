@@ -1,0 +1,30 @@
+<p>tree-view-block works!</p>
+<clr-tree>
+  <clr-tree-node *ngFor="let item of data">
+    {{item.configStatus}}
+    <clr-tree-node>
+      date: {{toDate(item.date)}}
+    </clr-tree-node>
+    <clr-tree-node>
+      configName: {{item.configName}}
+    </clr-tree-node>
+    <clr-tree-node>
+      installMethod: {{item.installMethod}}
+    </clr-tree-node>
+    <clr-tree-node>
+      nodes
+      <clr-tree-node *ngFor="let node of item.nodes">
+        {{node.host}}
+        <clr-tree-node>
+          status: {{node.status}}
+        </clr-tree-node>
+        <clr-tree-node>
+          message: {{node.message}}
+        </clr-tree-node>
+      </clr-tree-node>
+    </clr-tree-node>
+
+
+  </clr-tree-node>
+</clr-tree>
+
