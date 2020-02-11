@@ -1,5 +1,6 @@
 <p>tree-view-block works!</p>
 <clr-tree>
+  <div class="tree-container">
   <clr-tree-node *ngFor="let item of data">
     {{item.configStatus}}
     <clr-tree-node>
@@ -26,5 +27,6 @@
 
 
   </clr-tree-node>
+  </div>
 </clr-tree>
 

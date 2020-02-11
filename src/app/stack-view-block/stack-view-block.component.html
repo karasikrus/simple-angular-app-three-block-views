@@ -8,6 +8,7 @@
       type="button">Edit
     </button>
   </clr-stack-header>
+  <div class="static-stack">
   <clr-stack-block *ngFor="let item of data; let i = index"
                    [clrStackViewLevel]="1" [clrStackViewSetsize]="data.length" [clrStackViewPosinset]="i"
   >
@@ -43,6 +44,7 @@
       </clr-stack-block>
     </clr-stack-block>
   </clr-stack-block>
+  </div>
 </clr-stack-view>
 <clr-modal [(clrModalOpen)]="editModal">
   <h3 class="modal-title">Edit mode</h3>
