@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TreeViewBlockComponent } from './tree-view-block/tree-view-block.component';
+import { StackViewBlockComponent } from './stack-view-block/stack-view-block.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TreeViewBlockComponent
+    TreeViewBlockComponent,
+    StackViewBlockComponent
   ],
   imports: [
     BrowserModule,

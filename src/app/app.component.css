@@ -1,0 +1,12 @@
+.first-row{
+  display: flex;
+  flex-basis: 0;
+}
+app-stack-view-block{
+  flex-grow: 2;
+  flex-basis: 0;
+}
+app-tree-view-block{
+  flex-grow: 1;
+  flex-basis: 0;
+}
