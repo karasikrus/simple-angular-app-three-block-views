@@ -6,6 +6,7 @@ import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TreeViewBlockComponent } from './tree-view-block/tree-view-block.component';
 import { StackViewBlockComponent } from './stack-view-block/stack-view-block.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StackViewBlockComponent } from './stack-view-block/stack-view-block.com
   imports: [
     BrowserModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
