@@ -1,12 +1,17 @@
 .first-row{
   display: flex;
   flex-basis: 0;
+  height: 60vh;
 }
 app-stack-view-block{
   flex-grow: 2;
   flex-basis: 0;
+  display: flex;
+  flex-direction: column;
 }
 app-tree-view-block{
   flex-grow: 1;
   flex-basis: 0;
+  display: flex;
+  flex-direction: column;
 }

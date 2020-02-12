@@ -1,3 +1,8 @@
-.tree-container{
-  height: 50vh;
+
+.tree-title{
+  display: flex;
+  justify-content: space-between;
+}
+.tree-wrapper{
+  overflow-y: auto;
 }

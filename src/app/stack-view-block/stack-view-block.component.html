@@ -1,51 +1,52 @@
-<p>stack-view-block works!</p>
-<clr-stack-view>
-  <clr-stack-header>
-    Modal editor
-    <button
-      class="stack-action btn btn-sm btn-link"
-      (click)="editModal = true"
-      type="button">Edit
-    </button>
-  </clr-stack-header>
-  <div class="static-stack">
-  <clr-stack-block *ngFor="let item of data; let i = index"
-                   [clrStackViewLevel]="1" [clrStackViewSetsize]="data.length" [clrStackViewPosinset]="i"
-  >
-    <clr-stack-label>Install method</clr-stack-label>
-    <clr-stack-content>{{item.installMethod}}</clr-stack-content>
-    <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="1">
-      <clr-stack-label>Config status</clr-stack-label>
-      <clr-stack-content>{{item.configStatus}}</clr-stack-content>
-    </clr-stack-block>
-    <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="2">
-      <clr-stack-label>Config name</clr-stack-label>
-      <clr-stack-content>{{item.configName}}</clr-stack-content>
-    </clr-stack-block>
-    <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="3">
-      <clr-stack-label>Date</clr-stack-label>
-      <clr-stack-content>{{toDate(item.date)}}</clr-stack-content>
-    </clr-stack-block>
-    <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="4">
-      <clr-stack-label>Nodes</clr-stack-label>
-      <clr-stack-content>{{item.nodes.length}}</clr-stack-content>
-      <clr-stack-block *ngFor="let node of item.nodes; let j = index"
-                       [clrStackViewLevel]="3" [clrStackViewSetsize]="item.nodes.length" [clrStackViewPosinset]="j">
-        <clr-stack-label>Host</clr-stack-label>
-        <clr-stack-content>{{node.host}}</clr-stack-content>
-        <clr-stack-block [clrStackViewLevel]="4" [clrStackViewSetsize]="2" [clrStackViewPosinset]="1">
-          <clr-stack-label>Status</clr-stack-label>
-          <clr-stack-content>{{node.status}}</clr-stack-content>
+<h3 class="stack-title">
+  Modal editor
+  <button
+    class="stack-action btn btn-sm btn-link"
+    (click)="editModal = true"
+    type="button">Edit
+  </button>
+</h3>
+<div class="static-stack">
+  <clr-stack-view>
+    <div>
+      <clr-stack-block *ngFor="let item of data; let i = index"
+                       [clrStackViewLevel]="1" [clrStackViewSetsize]="data.length" [clrStackViewPosinset]="i"
+      >
+        <clr-stack-label>Install method</clr-stack-label>
+        <clr-stack-content>{{item.installMethod}}</clr-stack-content>
+        <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="1">
+          <clr-stack-label>Config status</clr-stack-label>
+          <clr-stack-content>{{item.configStatus}}</clr-stack-content>
         </clr-stack-block>
-        <clr-stack-block [clrStackViewLevel]="4" [clrStackViewSetsize]="2" [clrStackViewPosinset]="2">
-          <clr-stack-label>Message</clr-stack-label>
-          <clr-stack-content>{{node.message}}</clr-stack-content>
+        <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="2">
+          <clr-stack-label>Config name</clr-stack-label>
+          <clr-stack-content>{{item.configName}}</clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="3">
+          <clr-stack-label>Date</clr-stack-label>
+          <clr-stack-content>{{toDate(item.date)}}</clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="4">
+          <clr-stack-label>Nodes</clr-stack-label>
+          <clr-stack-content>{{item.nodes.length}}</clr-stack-content>
+          <clr-stack-block *ngFor="let node of item.nodes; let j = index"
+                           [clrStackViewLevel]="3" [clrStackViewSetsize]="item.nodes.length" [clrStackViewPosinset]="j">
+            <clr-stack-label>Host</clr-stack-label>
+            <clr-stack-content>{{node.host}}</clr-stack-content>
+            <clr-stack-block [clrStackViewLevel]="4" [clrStackViewSetsize]="2" [clrStackViewPosinset]="1">
+              <clr-stack-label>Status</clr-stack-label>
+              <clr-stack-content>{{node.status}}</clr-stack-content>
+            </clr-stack-block>
+            <clr-stack-block [clrStackViewLevel]="4" [clrStackViewSetsize]="2" [clrStackViewPosinset]="2">
+              <clr-stack-label>Message</clr-stack-label>
+              <clr-stack-content>{{node.message}}</clr-stack-content>
+            </clr-stack-block>
+          </clr-stack-block>
         </clr-stack-block>
       </clr-stack-block>
-    </clr-stack-block>
-  </clr-stack-block>
-  </div>
-</clr-stack-view>
+    </div>
+  </clr-stack-view>
+</div>
 <clr-modal [(clrModalOpen)]="editModal">
   <h3 class="modal-title">Edit mode</h3>
   <div class="modal-body">

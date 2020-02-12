@@ -1,3 +1,8 @@
 .static-stack {
-  height: 50vh;
+overflow-y: auto;
 }
+.stack-title{
+  display: flex;
+  justify-content: space-between;
+}
+
