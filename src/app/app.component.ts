@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 // @ts-ignore
-import install_history from '../assets/install_history.json';
+//import install_history from '../assets/install_history.json';
+import {GetDataService} from './services/get-data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,15 @@ import install_history from '../assets/install_history.json';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private getDataService: GetDataService) {
+  }
+
+  JSONData = {};
   title = 'three-block-views';
-  JSONData = install_history;
+
+  ngOnInit() {
+    this.JSONData = this.getDataService.getData();
+  }
 
 }
