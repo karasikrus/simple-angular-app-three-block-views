@@ -1,7 +1,10 @@
 <h3 class="tree-title">
   Tree view
 </h3>
-<clr-tree class="tree-wrapper">
+<div class="spinner-wrapper" *ngIf="!isLoaded">
+  <clr-spinner>Loading data</clr-spinner>
+</div>
+<clr-tree class="tree-wrapper" *ngIf="isLoaded">
   <div class="tree-container">
     <clr-tree-node *ngFor="let item of data">
       {{item.configStatus}}

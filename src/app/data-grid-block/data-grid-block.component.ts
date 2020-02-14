@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class DataGridBlockComponent implements OnInit {
 
   @Input() data;
+  @Input() isLoaded: boolean;
 
   constructor() { }
 

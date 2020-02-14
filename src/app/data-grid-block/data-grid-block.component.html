@@ -1,7 +1,10 @@
 <h3 class="stack-title">
   Datagrid
 </h3>
-<clr-datagrid>
+<div class="spinner-wrapper" *ngIf="!isLoaded">
+  <clr-spinner>Loading data</clr-spinner>
+</div>
+<clr-datagrid *ngIf="isLoaded">
   <clr-dg-column>Config name</clr-dg-column>
   <clr-dg-column>Config status</clr-dg-column>
   <clr-dg-column>Date</clr-dg-column>

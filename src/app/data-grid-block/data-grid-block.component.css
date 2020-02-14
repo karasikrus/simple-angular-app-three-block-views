@@ -2,6 +2,7 @@
   display: none !important;
 }
 .datagrid-div{
+  width: inherit;
   flex: inherit;
 }
 .expanded-div{

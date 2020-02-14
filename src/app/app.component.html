@@ -1,6 +1,7 @@
-<p>main component works!</p>
 <section class="first-row">
-  <app-tree-view-block [data]="JSONData"></app-tree-view-block>
-  <app-stack-view-block [data]="JSONData"></app-stack-view-block>
+  <app-tree-view-block [data]="JSONData" [isLoaded]="isLoaded"></app-tree-view-block>
+  <app-stack-view-block [data]="JSONData" [isLoaded]="isLoaded"></app-stack-view-block>
 </section>
-<app-data-grid-block [data]="JSONData"></app-data-grid-block>
+<section class="second-row">
+  <app-data-grid-block [data]="JSONData" [isLoaded]="isLoaded"></app-data-grid-block>
+</section>

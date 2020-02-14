@@ -3,6 +3,12 @@
   flex-basis: 0;
   height: 60vh;
 }
+.second-row{
+  width: 100%;
+  display: flex;
+  flex-basis: 0;
+  min-height: 40vh;
+}
 app-stack-view-block{
   flex-grow: 2;
   flex-basis: 0;
@@ -15,3 +21,9 @@ app-tree-view-block{
   display: flex;
   flex-direction: column;
 }
+app-data-grid-block{
+  width: inherit;
+  display: flex;
+  flex-flow: column;
+}
+

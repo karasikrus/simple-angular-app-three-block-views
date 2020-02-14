@@ -13,10 +13,14 @@ export class AppComponent implements OnInit {
 
   JSONData = {};
   title = 'three-block-views';
+  isLoaded = false;
 
   ngOnInit() {
     this.getDataService.getData()
-      .subscribe((data) => this.JSONData = data);
+      .subscribe((data) => {
+        this.JSONData = data;
+        this.isLoaded = true;
+      });
   }
 
 }

@@ -10,6 +10,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TreeViewBlockComponent implements OnInit {
 
   @Input() data;
+  @Input() isLoaded: boolean;
 
   constructor() { }
 

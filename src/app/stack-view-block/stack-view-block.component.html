@@ -1,12 +1,15 @@
 <h3 class="stack-title">
   Modal editor
-  <button
+  <button *ngIf="isLoaded"
     class="stack-action btn btn-sm btn-link"
     (click)="editModal = true"
     type="button">Edit
   </button>
 </h3>
-<div class="static-stack">
+<div class="spinner-wrapper" *ngIf="!isLoaded">
+  <clr-spinner>Loading data</clr-spinner>
+</div>
+<div class="static-stack" *ngIf="isLoaded">
   <clr-stack-view>
     <div>
       <clr-stack-block *ngFor="let item of data; let i = index"
@@ -51,7 +54,7 @@
     </div>
   </clr-stack-view>
 </div>
-<clr-modal [(clrModalOpen)]="editModal">
+<clr-modal [(clrModalOpen)]="editModal" *ngIf="isLoaded">
   <h3 class="modal-title">Edit mode</h3>
   <div class="modal-body">
     <clr-stack-view>

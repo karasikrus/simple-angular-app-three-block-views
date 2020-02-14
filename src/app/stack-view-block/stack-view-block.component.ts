@@ -9,6 +9,7 @@ import {SaveDataService} from '../services/save-data.service';
 export class StackViewBlockComponent implements OnInit {
 
   @Input() data;
+  @Input() isLoaded: boolean;
 
   constructor(private saveDataService: SaveDataService) { }
 
