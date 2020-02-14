@@ -6,7 +6,7 @@
     <clr-tree-node *ngFor="let item of data">
       {{item.configStatus}}
       <clr-tree-node>
-        date: {{toDate(item.date)}}
+        date: {{item.date| date:'medium'}}
       </clr-tree-node>
       <clr-tree-node>
         configName: {{item.configName}}

@@ -17,8 +17,5 @@ export class TreeViewBlockComponent implements OnInit {
     console.log('tree-view initialized ');
     console.log(this.data);
   }
-  toDate(date: number): Date{
-    return new Date(date);
-  }
 
 }

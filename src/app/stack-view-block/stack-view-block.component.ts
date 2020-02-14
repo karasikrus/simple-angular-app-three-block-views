@@ -14,8 +14,6 @@ export class StackViewBlockComponent implements OnInit {
   ngOnInit() {
   }
 
-  toDate(date: number): Date{
-    return new Date(date);
-  }
+
 
 }

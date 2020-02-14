@@ -12,7 +12,7 @@
   <clr-dg-row *ngFor="let item of data">
     <clr-dg-cell>{{item.configName}}</clr-dg-cell>
     <clr-dg-cell>{{item.configStatus}}</clr-dg-cell>
-    <clr-dg-cell>{{item.date | date}}</clr-dg-cell>
+    <clr-dg-cell>{{item.date | date:'medium'}}</clr-dg-cell>
     <clr-dg-cell>{{item.installMethod}}</clr-dg-cell>
     <clr-dg-cell>{{item.installId}}</clr-dg-cell>
     <clr-dg-cell>{{item.nodes.length}}</clr-dg-cell>

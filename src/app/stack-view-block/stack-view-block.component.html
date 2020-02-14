@@ -24,7 +24,7 @@
         </clr-stack-block>
         <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="3">
           <clr-stack-label>Date</clr-stack-label>
-          <clr-stack-content>{{toDate(item.date)}}</clr-stack-content>
+          <clr-stack-content>{{item.date| date:'medium'}}</clr-stack-content>
         </clr-stack-block>
         <clr-stack-block *ngIf="item.installId" [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="3">
           <clr-stack-label>Install ID</clr-stack-label>
@@ -73,7 +73,7 @@
         </clr-stack-block>
         <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="3">
           <clr-stack-label>Date</clr-stack-label>
-          <clr-stack-content>{{toDate(item.date)}}</clr-stack-content>
+          <clr-stack-content>{{item.date | date:'medium'}}</clr-stack-content>
         </clr-stack-block>
         <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="4">
           <clr-stack-label>InstallID</clr-stack-label>
