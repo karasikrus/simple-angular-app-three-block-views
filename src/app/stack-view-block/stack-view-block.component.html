@@ -101,6 +101,6 @@
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="editModal = false">Done</button>
+    <button type="button" class="btn btn-primary" (click)="editModal = false; this.sendData(data)">Save changes to server</button>
   </div>
 </clr-modal>

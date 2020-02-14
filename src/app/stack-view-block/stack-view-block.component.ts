@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {SaveDataService} from '../services/save-data.service';
 
 @Component({
   selector: 'app-stack-view-block',
@@ -9,7 +10,11 @@ export class StackViewBlockComponent implements OnInit {
 
   @Input() data;
 
-  constructor() { }
+  constructor(private saveDataService: SaveDataService) { }
+
+  sendData(data) {
+    this.saveDataService.sendData(data);
+  }
 
   ngOnInit() {
   }
