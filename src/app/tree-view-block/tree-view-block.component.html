@@ -14,6 +14,9 @@
       <clr-tree-node>
         installMethod: {{item.installMethod}}
       </clr-tree-node>
+      <clr-tree-node *ngIf="item.installId">
+        Install ID: {{item.installId}}
+      </clr-tree-node>
       <clr-tree-node>
         nodes
         <clr-tree-node *ngFor="let node of item.nodes">
