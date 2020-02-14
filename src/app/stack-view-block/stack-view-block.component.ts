@@ -14,7 +14,8 @@ export class StackViewBlockComponent implements OnInit {
   constructor(private saveDataService: SaveDataService) { }
 
   sendData(data) {
-    this.saveDataService.sendData(data);
+    this.saveDataService.sendData(data)
+      .subscribe();
   }
 
   ngOnInit() {
