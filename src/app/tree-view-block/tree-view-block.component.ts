@@ -14,8 +14,7 @@ export class TreeViewBlockComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('tree-view initialized ');
-    console.log(this.data);
+
   }
 
 }
