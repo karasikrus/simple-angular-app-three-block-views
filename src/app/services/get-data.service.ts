@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import install_history from '../../assets/install_history.json';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetDataService {
+  dataUrl = 'http://localhost:3000/data';
   getData() {
-    return install_history;
+    return this.httpClient.get(this.dataUrl);
   }
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 }

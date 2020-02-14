@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
@@ -18,6 +19,7 @@ import { DataGridBlockComponent } from './data-grid-block/data-grid-block.compon
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ClarityModule,
     BrowserAnimationsModule,
     FormsModule
