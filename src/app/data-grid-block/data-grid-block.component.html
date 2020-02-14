@@ -1,0 +1,44 @@
+<h3 class="stack-title">
+  Datagrid
+</h3>
+<clr-datagrid>
+  <clr-dg-column>Config name</clr-dg-column>
+  <clr-dg-column>Config status</clr-dg-column>
+  <clr-dg-column>Date</clr-dg-column>
+  <clr-dg-column>Install method</clr-dg-column>
+  <clr-dg-column>Install ID</clr-dg-column>
+  <clr-dg-column>Nodes</clr-dg-column>
+
+  <clr-dg-row *ngFor="let item of data">
+    <clr-dg-cell>{{item.configName}}</clr-dg-cell>
+    <clr-dg-cell>{{item.configStatus}}</clr-dg-cell>
+    <clr-dg-cell>{{item.date | date}}</clr-dg-cell>
+    <clr-dg-cell>{{item.installMethod}}</clr-dg-cell>
+    <clr-dg-cell>{{item.installId}}</clr-dg-cell>
+    <clr-dg-cell>{{item.nodes.length}}</clr-dg-cell>
+    <clr-dg-row-detail class="expanded-div" *clrIfExpanded>
+      <div class="datagrid-div">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Node Host</th>
+            <th>Node status</th>
+            <th>Node message</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let node of item.nodes">
+            <td>{{node.host}}</td>
+            <td>{{node.status}}</td>
+            <td>{{node.message}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </clr-dg-row-detail>
+
+
+  </clr-dg-row>
+
+  <clr-dg-footer>{{data.length}} configs</clr-dg-footer>
+</clr-datagrid>

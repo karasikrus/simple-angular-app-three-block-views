@@ -1,0 +1,12 @@
+.datagrid-div .datagrid-table.datagrid-cell.datagrid-expandable-caret{
+  display: none !important;
+}
+.datagrid-div{
+  flex: inherit;
+}
+.expanded-div{
+  padding: 0;
+}
+.table{
+  margin: 0;
+}
