@@ -4,5 +4,6 @@ overflow-y: auto;
 .stack-title{
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 

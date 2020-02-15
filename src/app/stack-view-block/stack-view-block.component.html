@@ -1,11 +1,13 @@
-<h3 class="stack-title">
-  Modal editor
-  <button *ngIf="isLoaded"
-    class="stack-action btn btn-sm btn-link"
-    (click)="editModal = true"
-    type="button">Edit
-  </button>
-</h3>
+<header class="header header-2">
+  <h3 class="stack-title">
+    Modal editor
+    <button *ngIf="isLoaded"
+            class="edit-button stack-action btn btn-sm btn-inverse btn-link"
+            (click)="editModal = true"
+            type="button">Edit
+    </button>
+  </h3>
+</header>
 <div class="spinner-wrapper" *ngIf="!isLoaded">
   <clr-spinner>Loading data</clr-spinner>
 </div>

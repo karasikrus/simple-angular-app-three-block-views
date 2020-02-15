@@ -1,9 +1,5 @@
-
-.tree-title{
-  display: flex;
-  justify-content: space-between;
-}
 .tree-wrapper{
   overflow-y: auto;
+  flex: inherit;
 }
 

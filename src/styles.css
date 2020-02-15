@@ -10,3 +10,9 @@
   align-items: center;
   justify-content: center;
 }
+.datagrid{
+  margin: 0;
+}
+h3{
+  color: aliceblue;
+}
