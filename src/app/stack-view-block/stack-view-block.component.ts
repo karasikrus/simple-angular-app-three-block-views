@@ -8,17 +8,20 @@ import {SaveDataService} from '../services/save-data.service';
 })
 export class StackViewBlockComponent implements OnInit {
 
+  editModal = false;
+
   @Input() data;
   @Input() isLoaded: boolean;
 
   constructor(private saveDataService: SaveDataService) { }
 
-  sendData(data) {
+
+sendData(data) {
     this.saveDataService.sendData(data)
       .subscribe();
   }
 
-  ngOnInit() {
+ngOnInit() {
   }
 
 

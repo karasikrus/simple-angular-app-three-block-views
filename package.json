@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "start-server": "node ./server/app.ts",
+    "build": "ng build --outputPath=server/public/ --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
