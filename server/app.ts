@@ -6,7 +6,10 @@ const bodyParser = require('body-parser');
 
 app.use(cors());
 app.use(bodyParser.json());
-
+app.use(express.static(__dirname + '/public'));
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
 app.get('/data', (req, res) => {
   fs.readFile(__dirname + '/data/install_history.json', 'utf8',
     (err, contents) => {
