@@ -31,7 +31,8 @@
           <clr-stack-label>Date</clr-stack-label>
           <clr-stack-content>{{item.date| date:'medium'}}</clr-stack-content>
         </clr-stack-block>
-        <clr-stack-block *ngIf="item.installId" [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="3">
+        <clr-stack-block *ngIf="item.installId" [clrStackViewLevel]="2" [clrStackViewSetsize]="4"
+                         [clrStackViewPosinset]="3">
           <clr-stack-label>Install ID</clr-stack-label>
           <clr-stack-content>{{item.installId}}</clr-stack-content>
         </clr-stack-block>
@@ -70,7 +71,15 @@
         <clr-stack-content><input type="text" [(ngModel)]="item.installMethod" class="clr-input"/></clr-stack-content>
         <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="1">
           <clr-stack-label>Config status</clr-stack-label>
-          <clr-stack-content><input type="text" [(ngModel)]="item.configStatus" class="clr-input"/></clr-stack-content>
+          <clr-stack-content>
+            <div class="clr-select-wrapper">
+              <select class="clr-select" [(ngModel)]="item.configStatus">
+                <option>not_changed</option>
+                <option>modified</option>
+                <option>deleted</option>
+              </select>
+            </div>
+          </clr-stack-content>
         </clr-stack-block>
         <clr-stack-block [clrStackViewLevel]="2" [clrStackViewSetsize]="4" [clrStackViewPosinset]="2">
           <clr-stack-label>Config name</clr-stack-label>
@@ -106,6 +115,8 @@
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-primary" (click)="editModal = false; this.sendData(data)">Save changes to server</button>
+    <button type="button" class="btn btn-primary" (click)="editModal = false; this.sendData(data)">Save changes to
+      server
+    </button>
   </div>
 </clr-modal>
